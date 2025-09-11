@@ -35,6 +35,7 @@
 			<div class="progress-panel border">
 				<div class="victories-input-group">
 					<h5 data-i18n="victories"></h5>
+					<span name="attr_victories" class="victory-count"></span>
 					<div class="progressbox-group">
 						<input id="victories-checkbox-1" type="checkbox" value="1" name="attr_victories" />
 						<label class="progressbox" for="victories-checkbox-1"></label>
@@ -153,9 +154,9 @@
 				<input type="number" name="attr_stamina" />
 				<label class="sublabel" data-i18n="stamina-current"></label>
 			</div>
-			<input type="number" class="input-md" name="attr_stamina_max" />
+			<input type="number" class="input-stamina" name="attr_stamina_max" />
 			<label class="sublabel" data-i18n="stamina-max"></label>
-			<input type="number" class="input-md" name="attr_stamina_winded" />
+			<input type="number" class="input-stamina" name="attr_stamina_winded" />
 			<label class="sublabel" data-i18n="winded"></label>
 			<div class="stamina-temporary-input-group">
 				<input type="number" class="input-md" name="attr_stamina_temporary" />
@@ -163,7 +164,7 @@
 			</div>
 			<input type="number" class="input-md" disabled value="0" />
 			<label class="sublabel" data-i18n="dying"></label>
-			<input type="number" class="input-md" name="attr_stamina_dead" />
+			<input type="number" class="input-stamina" name="attr_stamina_dead" />
 			<label class="sublabel" data-i18n="dead"></label>
 		</div>
 		<div class="recoveries-panel">
@@ -172,7 +173,7 @@
 				<input type="number" name="attr_recoveries" />
 			</div>
 			<div class="recovery-amount-input-group">
-				<input type="number" class="input-md" name="attr_recovery_amount" />
+				<input type="number" class="input-stamina" name="attr_recovery_amount" />
 				<label class="sublabel" data-i18n="recovery-amount"></label>
 			</div>
 			<div class="recoveries-max-input-group">
@@ -1251,6 +1252,7 @@ const rollValueMap = {
   console.log('Ranged Free Strike power roll:', roll);
   startRoll(roll, ({ rollId }) => finishRoll(rollId));
 });
+
 	/**
 	** import start
 	**/
